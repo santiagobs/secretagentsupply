@@ -8,8 +8,142 @@ html,body {
 .container {
     width: 960px;
     margin: 0 auto;
-    /*border: medium solid purple;*/
 }
+
+/*Media queries for responsive design */
+
+  /*----Common styles for tablet and desktop design----*/
+@media only screen and (min-width: 1024px), (max-width: 1025px) {
+  .banner h1{
+    font-size: 2rem;
+  }
+  .banner h5{
+    font-size: 1rem;
+    padding-bottom: 0.25rem;
+  }
+  .blackbox {
+    width: 20rem;
+    padding: 2rem 3rem;
+    top: 9em;
+  }
+  .banner {
+    height: 25rem;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  .contactbox {
+    width: 35%;
+  }
+  footer {
+      padding: 5rem 0;
+  }
+
+}
+
+
+
+  /*----Desktop query----*/
+@media only screen and (min-width: 1024px) {
+    /*Remove mobilemenu */
+    .mobilemenu {
+      display: none;
+    }
+    /*adjust product width*/
+    .product {
+        width: 30%;
+    }
+    .desktopmenu {
+      display: flex;
+      justify-content: space-between;
+    }
+ }
+
+  /*Tablet query */
+@media only screen and (max-width: 1023px) {
+
+  html,body {
+    font-size: 16px;
+  }
+  /*Remove desktopmenu & show tabletmenu */
+    .desktopmenu{
+      display: none;
+    }
+  .mobilemenu {
+      display: flex;
+      justify-content: center;
+    }
+  /*Remove glasses product, modify product width*/
+  .glasses {
+    display: none;
+  }
+  .product {
+      width: 47%;
+  }
+
+
+}
+
+  /*----Smartphone query----*/
+@media only screen and (max-width: 470px) {
+
+  /*Remove desktopmenu & show tabletmenu */
+  .desktopmenu{
+    display: none;
+  }
+  .mobilemenu{
+    justify-content: center;
+  }
+  /*Remove glasses and watch product, modify product width*/
+  .glasses{
+    display: none;
+  }
+  .watch {
+    display: none;
+  }
+  .product {
+    width: 90%;
+  }
+  /*Change banner font-size*/
+  .banner h1{
+    font-size: 1rem;
+  }
+  .banner h5{
+    font-size: 0.77rem;
+  }
+  /*Change blackbox behavior*/
+  .blackbox {
+    width: 100%;
+    padding: 1rem 2rem;
+    top: 10em;
+  }
+  /*Change banner height*/
+  .banner {
+    height: 15rem;
+  }
+  /*Change Contact display*/
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  .contactbox {
+    width: 90%;
+  }
+  footer {
+      text-align: center;
+  }
+
+
+}
+
+
+
+
+
 /*Header rules */
 header {
   background-color: black;
@@ -32,7 +166,6 @@ header .container {
 }
 /*Banner rules */
 .banner {
-  height: 25rem;
   background-image: url(../images/moto.jpeg);
   background-position: center;
   background-size: cover;
@@ -41,27 +174,20 @@ header .container {
 .blackbox {
   background-color: black;
   color: white;
-  width: 20rem;
-  padding: 2rem 3rem;
-  top: 9em;
   position: relative;
   line-height: normal;
 }
 .banner h1{
-  font-size: 2rem;
   font-weight: bold;
 }
 .banner h5{
-  font-size: 1rem;
   font-weight: bold;
-  padding-bottom: 0.25rem;
 }
 
 /*Menu rules */
 
 nav{
   background-color: firebrick;
-  width: 100%;
 }
 nav a {
   text-decoration: none;
@@ -70,10 +196,8 @@ nav a {
 nav span {
   padding: 0.75rem 0;
 }
-nav .container {
-  display: flex;
-  justify-content: space-between;
-}
+
+
 
 /*Product Grid rules */
 
@@ -82,8 +206,7 @@ nav .container {
   justify-content: space-between;
 }
 .product {
-    width: 30%;
-    margin: 3rem 0;
+  margin: 3rem 0;
 }
 .product-image{
   display: flex;
@@ -105,14 +228,7 @@ nav .container {
 }
 /*Contact section rules */
 
-.contact {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4rem;
-}
-.contactbox {
-  width: 35%;
-}
+
 .location,.hours {
   background-color: black;
   padding: 1rem 0 1rem 2rem;
@@ -126,5 +242,5 @@ footer {
 
   background-color: black;
   width: 100%;
-  padding: 5rem 0;
+
 }
