@@ -6,8 +6,10 @@ html,body {
 }
 
 .container {
-    width: 960px;
+
     margin: 0 auto;
+
+
 }
 
 /*Media queries for responsive design */
@@ -54,9 +56,11 @@ html,body {
     /*adjust product width*/
     .product {
         width: 30%;
+        margin: auto;
     }
     .desktopmenu {
       display: flex;
+      align-items: center;
       justify-content: space-between;
     }
  }
@@ -93,9 +97,7 @@ html,body {
   .desktopmenu{
     display: none;
   }
-  .mobilemenu{
-    justify-content: center;
-  }
+
   /*Remove glasses and watch product, modify product width*/
   .glasses{
     display: none;
@@ -105,6 +107,10 @@ html,body {
   }
   .product {
     width: 90%;
+    margin: auto;
+  }
+  .products {
+    flex-wrap: wrap;
   }
   /*Change banner font-size*/
   .banner h1{
@@ -133,9 +139,6 @@ html,body {
   .contactbox {
     width: 90%;
   }
-  footer {
-      text-align: center;
-  }
 
 
 }
@@ -147,8 +150,7 @@ html,body {
 /*Header rules */
 header {
   background-color: black;
-  width: 100%;
-  display: block;
+
 }
 header img {
   height: 1.5rem;
@@ -164,12 +166,14 @@ header .container {
   align-items: center;
   padding: 0.66rem 0;
 }
+
+
 /*Banner rules */
 .banner {
-  background-image: url(../images/moto.jpeg);
+  background: url(../images/moto.jpeg);
   background-position: center;
   background-size: cover;
-  width: 100%;
+
 }
 .blackbox {
   background-color: black;
@@ -201,12 +205,16 @@ nav span {
 
 /*Product Grid rules */
 
-.productgrid  {
+.products  {
   display: flex;
   justify-content: space-between;
+
+
 }
 .product {
   margin: 3rem 0;
+
+
 }
 .product-image{
   display: flex;
@@ -240,7 +248,13 @@ nav span {
 
 footer {
 
+  padding: 5rem 0;
   background-color: black;
-  width: 100%;
+  color: white;
 
 }
+
+@media only screen and (max-width: 470px) {
+  footer {
+    text-align: center;
+  }
